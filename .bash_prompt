@@ -83,7 +83,7 @@ function set_git_branch {
   fi
 
   # Set the final branch string.
-  BRANCH="(${state}${branch}${COLOR_NONE})${remote} "
+  BRANCH="${state}(${branch})${remote}${COLOR_NONE} "
 }
 
 # Return the prompt symbol to use, colorized based on the return value of the
@@ -123,8 +123,7 @@ function set_bash_prompt () {
 
   # Set the bash prompt variable.
   PS1="
-
-${LIGHT_BLUE}/${COLOR_NONE}\u@\h${LIGHT_BLUE}/  ${YELLOW}\w${COLOR_NONE} ${BRANCH}${PYTHON_VIRTUALENV}${PROMPT_SYMBOL} "
+${YELLOW}(${CYAN}\u${MAGENTA}@${CYAN}\h${YELLOW}) ${COLOR_NONE}\w${COLOR_NONE} ${BRANCH}${PYTHON_VIRTUALENV}${PROMPT_SYMBOL} "
 }
 
 # Tell bash to execute this function just before displaying its prompt.
