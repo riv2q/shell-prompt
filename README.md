@@ -1,4 +1,4 @@
-# Bash prompt #
+# Shell prompt #
 
 Creating this to learn some shell scripting, this is my little modification of https://gist.github.com/insin/1425703 whith installation shell script.
 
@@ -6,7 +6,13 @@ Creating this to learn some shell scripting, this is my little modification of h
 
 ![prompt.png](https://bitbucket.org/repo/jGd96k/images/2461709385-prompt.png)
 
-### Installation ###
+### How to install? ###
+
+clone repository by 
+```
+git clone https://github.com/riv2q/shell-prompt.git
+```
+then get inside the project and type:
 
 ```
 ./install_prompt.sh
