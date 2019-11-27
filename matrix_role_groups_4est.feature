@@ -1,3 +1,23 @@
+Feature: Matrix - Role Groups Access
+
+# Assets
+    Scenario Outline: Has access to assets library
+       Given we log in as "<login>"
+        then the page has "Dashboard" title
+         and we see "Assets" item with "/dam/assets/" URL and "picture" icon
+
+    Examples: Users
+    | caseid | login                                       |
+    | 662937 | fido.personas+campaign_manager@gmail.com    |
+
+    Scenario Outline: Can upload an asset
+       Given we log in as "<login>"
+        then we upload a new asset
+
+    Examples: Users
+    | caseid | login                                       |
+    | 662938 | fido.personas+campaign_manager@gmail.com    |
+
     Scenario Outline: Can upload new version
        Given we log in as "<login>"
         when we click "Assets" dashboard tile
